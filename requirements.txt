@@ -1,0 +1,2 @@
+PySimpleGUI==4.45.0
+opencv-python3==3.2.0
