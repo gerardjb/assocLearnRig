@@ -1,0 +1,4 @@
+libaec0
+libatlas3-base
+libhdf5-103-1
+libsz2
