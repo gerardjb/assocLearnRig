@@ -1,7 +1,7 @@
 import sys
 import subprocess
 
-required = {'numpy~=1.22.1','PySimpleGUI==4.18.1','opencv-contrib-python==4.5.3.56'}
+required = {'numpy~=1.22.1','PySimpleGUI','opencv-contrib-python==4.5.3.56'}
 
 for package in required:
   subprocess.call(['pip3','install',package])
