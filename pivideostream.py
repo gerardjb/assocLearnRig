@@ -127,7 +127,7 @@ class PiVideoStream(mp.Process):
         # set camera parameters
         self.camera.resolution = resolution
         self.camera.framerate = framerate
-		self.camera.rotation = 180
+	self.camera.rotation = 180
         # consistent pictures and timing on timestamps
         self.camera.iso = 800
         time.sleep(1)
