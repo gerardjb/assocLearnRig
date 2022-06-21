@@ -118,7 +118,6 @@ def parseRotary(df,idx):
 
 #%% Choose a directory
 #All camera and timestamp files
-# r'C:\Users\gerardjb\Desktop\temp\ForKate'
 subDirs = next(os.walk(pathMaster))[1]
 print('Available datasets:')
 for idx,n in enumerate(subDirs):
@@ -132,6 +131,9 @@ subDirIdx = range(len(subDirs))#
 for thisSubDir in subDirIdx:
     path = os.path.join(pathMaster,subDirs[thisSubDir])
     files = [(d,f) for d,_,fs in os.walk(path) for f in fs if f.endswith('.data')]
+	#pass if no data files
+    if not files:
+        continue
     #for sorting
     convert = lambda text: int(text) if text.isdigit() else text.lower()
     alphanum_key = lambda key: [convert(c) for c in re.split('([0-9]+)', key)]
