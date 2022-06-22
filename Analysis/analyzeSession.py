@@ -276,7 +276,9 @@ for thisSubDir in subDirIdx:
     pl.figure(2)
     idx = 0
     legStr = []
+    legHand = []
     legStrR = []
+    legHandR = []
     for kind in trialKinds:
         if not sum(trialTypes==kind)==0:
             subSlices = slices[trialTypes[uniTrials]==kind]
@@ -286,11 +288,13 @@ for thisSubDir in subDirIdx:
             meanR = np.nanmean(subSlicesR,axis=0)
             errR = np.nanstd(subSlicesR,axis=0)
             pl.figure(1)
-            pl.plot(timeBins-csTime,mean,color=colors[trialKinds==kind][0])
+            h, = pl.plot(timeBins-csTime,mean,color=colors[trialKinds==kind][0])
+            legHand.append(h)
             pl.fill_between(timeBins-csTime, mean-err, mean+err, alpha=.1, color=colors[trialKinds==kind][0], lw=0)
             legStr.append(kind)
             pl.figure(2)
-            pl.plot(timeBins-csTime,meanR,color=colors[trialKinds==kind][0])
+            h, = pl.plot(timeBins-csTime,meanR,color=colors[trialKinds==kind][0])
+            legHandR.append(h)
             pl.fill_between(timeBins-csTime, meanR-errR, meanR+errR, alpha=.1, color=colors[trialKinds==kind][0], lw=0)
             legStrR.append(kind)
             idx+=1
@@ -301,7 +305,7 @@ for thisSubDir in subDirIdx:
     pl.xlabel('time from CS onset (ms)')
     pl.ylabel('Average eyelid position (a.u.)')
     pl.title('_'.join(sessionInfo))
-    pl.legend(legStr)
+    pl.legend(legHand,legStr)
     pl.tight_layout()
     pl.savefig(os.path.join(localDir,'_'.join(sessionInfo)+'avgTraces.pdf'))
 	
@@ -312,7 +316,7 @@ for thisSubDir in subDirIdx:
     pl.xlabel('time from CS onset (ms)')
     pl.ylabel('Average speed (cm/s)')
     pl.title('_'.join(sessionInfo))
-    pl.legend(legStr)
+    pl.legend(legHandR,legStrR)
     pl.tight_layout()
     pl.savefig(os.path.join(localDir,'_'.join(sessionInfo)+'avgTracesRotary.pdf'))
     
