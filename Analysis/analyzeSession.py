@@ -25,7 +25,6 @@ import pandas as pd
 import os
 import csv
 import re
-#from scipy.ndimage.filters import uniform_filter1d as unfilt1D #for 1D temporal filtering
 
 #%% Select directory with animal data
 root = Tk()
