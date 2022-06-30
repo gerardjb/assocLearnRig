@@ -1,7 +1,7 @@
 import sys
 import subprocess
 
-required = {'numpy~=1.22.1','PySimpleGUI','opencv-contrib-python==4.5.3.56'}
+required = {'numpy~=1.21.6','PySimpleGUI','opencv-contrib-python==4.5.3.56'}
 
 for package in required:
   subprocess.call(['pip3','install',package])
@@ -9,7 +9,7 @@ for package in required:
 requiredDll = {'libaec0', 'libaom0', 'libatk-bridge2.0-0', 'libatk1.0-0', 'libatlas3-base', 'libatspi2.0-0',\
  'libavcodec58', 'libavformat58', 'libavutil56', 'libbluray2', 'libcairo-gobject2', 'libcairo2',\
  'libchromaprint1', 'libcodec2-0.9', 'libdatrie1', 'libdav1d4', 'libdrm2', 'libepoxy0', 'libgdk-pixbuf-2.0-0',\
- 'libgfortran5', 'libgme0', 'libgraphite2-3', 'libgsm1', 'libgtk-3-0', 'libharfbuzz0b', 'libhdf5-103-1',\
+ 'libgfortran5', 'libgme0', 'libgraphite2-3', 'libgsm1', 'libgtk-3-0', 'libharfbuzz0b', 'libhdf5-103',\
  'libilmbase25', 'libmp3lame0', 'libmpg123-0', 'libnorm1', 'libogg0', 'libopenexr25', 'libopenjp2-7',\
  'libopenmpt0', 'libopus0', 'libpango-1.0-0', 'libpangocairo-1.0-0', 'libpangoft2-1.0-0', 'libpgm-5.3-0',\
  'libpixman-1-0', 'librabbitmq4', 'librsvg2-2', 'libshine3', 'libsnappy1v5', 'libsodium23', 'libsoxr0',\
