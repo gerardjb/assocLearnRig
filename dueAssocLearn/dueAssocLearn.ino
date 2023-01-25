@@ -414,7 +414,7 @@ void GetState() {
 
   Serial.println("numTrial=" + String(trial.numTrial));
   Serial.println("trialDur=" + String(trial.trialDur));
-  Serial.println("interTrialInteval=" + String(trial.ITIlow) +" "+ String(trial.ITIhigh)); 
+  Serial.println("interTrialInteval=" + String(trial.ITIlow) + String(trial.ITIhigh)); 
 
   Serial.println("preCSdur=" + String(trial.preCSdur));
   Serial.println("CSdur=" + String(trial.CSdur));
