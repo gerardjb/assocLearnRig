@@ -43,7 +43,7 @@ def pickROI(imArray):
     pts = np.asarray(pts, dtype=np.int32)
     roi = np.zeros(imArray[0].shape, dtype=np.int32)
     roi = cv2.fillConvexPoly(roi, pts, (1,1,1), lineType=cv2.LINE_AA)
-    roi = roi.astype(np.float)
+    roi = roi.astype(float)
     return roi   
 
 #%% initializing the image stack and parsing the image stack
